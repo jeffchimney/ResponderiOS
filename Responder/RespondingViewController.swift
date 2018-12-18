@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  RespondingViewController
 //  Responder
 //
 //  Created by Jeff Chimney on 2018-12-12.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class RespondingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
