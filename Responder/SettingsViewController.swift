@@ -23,15 +23,26 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         btnSubmit.layer.borderColor = UIColor.orange.cgColor
         btnSubmit.setBackgroundColor(for: .normal)
         
-        let loginString = UserDefaultsHelper.get(string: "loginString")
-        var loginStringArray: [String] = []
-        for character in loginString {
-            loginStringArray.append(String(character))
+        let firehallId = UserDefaultsHelper.get(string: "firehallId")
+        let userId = UserDefaultsHelper.get(string: "userId")
+        var firehallIdArray: [String] = []
+        var userIdArray: [String] = []
+        for character in firehallId {
+            firehallIdArray.append(String(character))
+        }
+        for character in userId {
+            userIdArray.append(String(character))
         }
         for txtField in txtLoginFields {
             txtField.delegate = self
-            if loginString != "" {
-                txtField.text = loginStringArray[txtField.tag]
+            if txtField.tag < 6 {
+                if firehallId != "" {
+                    txtField.text = firehallIdArray[txtField.tag]
+                }
+            } else {
+                if userId != "" {
+                    txtField.text = userIdArray[txtField.tag-6]
+                }
             }
         }
     }
@@ -39,17 +50,28 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     @IBAction func btnSubmitPressed(_ sender: Any) {
         let generator = UIImpactFeedbackGenerator(style: .heavy)
         generator.impactOccurred()
-        var loginString = ""
+        var firehallId = ""
+        var userId = ""
         for textField in txtLoginFields {
             if textField.text != "" {
-                loginString.append(contentsOf: textField.text!)
+                if textField.tag < 6 {
+                    firehallId.append(contentsOf: textField.text!)
+                } else {
+                    userId.append(contentsOf: textField.text!)
+                }
             } else {
                 return
             }
         }
         
-        UserDefaultsHelper.set(loginString: loginString)
-        tabBarController?.selectedIndex = 0
+        print(firehallId)
+        print(userId)
+        
+        UserDefaultsHelper.set(firehallId: firehallId)
+        UserDefaultsHelper.set(userId: userId)
+        
+        FirehallAPIHelper.register()
+        //tabBarController?.selectedIndex = 0
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

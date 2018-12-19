@@ -10,9 +10,14 @@ import Foundation
 
 class UserDefaultsHelper {
     
-    static func set(loginString: String) {
+    static func set(firehallId: String) {
         let defaults = UserDefaults.standard
-        defaults.set(loginString, forKey: "loginString")
+        defaults.set(firehallId, forKey: "firehallId")
+    }
+    
+    static func set(userId: String) {
+        let defaults = UserDefaults.standard
+        defaults.set(userId, forKey: "userId")
     }
     
     static func get(string forKey: String) -> String {
