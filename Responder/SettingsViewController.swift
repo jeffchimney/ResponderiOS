@@ -37,7 +37,8 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func btnSubmitPressed(_ sender: Any) {
-        btnSubmit.toggleBackgroundColor()
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
         var loginString = ""
         for textField in txtLoginFields {
             if textField.text != "" {

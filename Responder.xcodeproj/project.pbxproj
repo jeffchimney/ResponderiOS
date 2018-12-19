@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BE19D12221C99DCA0093A702 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE19D12121C99DCA0093A702 /* UserDefaultsHelper.swift */; };
+		BE19D12421C9AFC80093A702 /* ResponderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE19D12321C9AFC80093A702 /* ResponderCell.swift */; };
+		BE19D12621C9B13A0093A702 /* Responder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE19D12521C9B13A0093A702 /* Responder.swift */; };
 		BE34ED8721C1663C00EB399F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE34ED8621C1663C00EB399F /* AppDelegate.swift */; };
 		BE34ED8921C1663C00EB399F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE34ED8821C1663C00EB399F /* MainViewController.swift */; };
 		BE34ED8B21C1663C00EB399F /* RespondingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE34ED8A21C1663C00EB399F /* RespondingViewController.swift */; };
@@ -18,6 +20,7 @@
 		BE34EDA921C1663E00EB399F /* ResponderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE34EDA821C1663E00EB399F /* ResponderUITests.swift */; };
 		BE34EDB721C1665D00EB399F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE34EDB621C1665D00EB399F /* SettingsViewController.swift */; };
 		BE72716D21C8026A007E1333 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE72716C21C8026A007E1333 /* Extensions.swift */; };
+		BED9658421CAC457008DAEC4 /* ResponderCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BED9658321CAC457008DAEC4 /* ResponderCellView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		BE19D12121C99DCA0093A702 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		BE19D12321C9AFC80093A702 /* ResponderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponderCell.swift; sourceTree = "<group>"; };
+		BE19D12521C9B13A0093A702 /* Responder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responder.swift; sourceTree = "<group>"; };
 		BE34ED8321C1663C00EB399F /* Responder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Responder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE34ED8621C1663C00EB399F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE34ED8821C1663C00EB399F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +60,7 @@
 		BE34EDAA21C1663E00EB399F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE34EDB621C1665D00EB399F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BE72716C21C8026A007E1333 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BED9658321CAC457008DAEC4 /* ResponderCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResponderCellView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,9 @@
 				BE34ED9421C1663E00EB399F /* Info.plist */,
 				BE72716C21C8026A007E1333 /* Extensions.swift */,
 				BE19D12121C99DCA0093A702 /* UserDefaultsHelper.swift */,
+				BE19D12321C9AFC80093A702 /* ResponderCell.swift */,
+				BE19D12521C9B13A0093A702 /* Responder.swift */,
+				BED9658321CAC457008DAEC4 /* ResponderCellView.xib */,
 			);
 			path = Responder;
 			sourceTree = "<group>";
@@ -244,6 +253,7 @@
 				BE34ED9321C1663E00EB399F /* LaunchScreen.storyboard in Resources */,
 				BE34ED9021C1663E00EB399F /* Assets.xcassets in Resources */,
 				BE34ED8E21C1663C00EB399F /* Main.storyboard in Resources */,
+				BED9658421CAC457008DAEC4 /* ResponderCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,8 +282,10 @@
 				BE72716D21C8026A007E1333 /* Extensions.swift in Sources */,
 				BE34ED8B21C1663C00EB399F /* RespondingViewController.swift in Sources */,
 				BE34ED8721C1663C00EB399F /* AppDelegate.swift in Sources */,
+				BE19D12621C9B13A0093A702 /* Responder.swift in Sources */,
 				BE34ED8921C1663C00EB399F /* MainViewController.swift in Sources */,
 				BE34EDB721C1665D00EB399F /* SettingsViewController.swift in Sources */,
+				BE19D12421C9AFC80093A702 /* ResponderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
